@@ -1,0 +1,11 @@
+.container {
+  display: block;
+  color: aqua;
+  background-color: black;
+}
+
+.title {
+  display: flex;
+  align-items: center;
+  gap: 20px;
+}
