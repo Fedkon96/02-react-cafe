@@ -1,23 +1,23 @@
 import css from "./VoteStats.module.css";
-import type { Status } from "../../types/votes";
+import type { Votes } from "../../types/votes";
 
 interface VoteStatsProps {
-  vote: Status;
+  votes: Votes;
   totalVotes: number;
   positiveRate: number;
 }
 
-const VoteStats = ({ vote, totalVotes, positiveRate }: VoteStatsProps) => {
+const VoteStats = ({ votes, totalVotes, positiveRate }: VoteStatsProps) => {
   return (
     <div className={css.container}>
       <p className={css.stat}>
-        Good: <strong>{vote.good}</strong>
+        Good: <strong>{votes.good}</strong>
       </p>
       <p className={css.stat}>
-        Neutral: <strong>{vote.neutral}</strong>
+        Neutral: <strong>{votes.neutral}</strong>
       </p>
       <p className={css.stat}>
-        Bad: <strong>{vote.bad}</strong>
+        Bad: <strong>{votes.bad}</strong>
       </p>
       <p className={css.stat}>
         Total: <strong>{totalVotes}</strong>
